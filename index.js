@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 import ExcelJS from 'exceljs';
 import 'dotenv/config';
 
-async function naoSeiAinda(params) {
+async function iniciandoLinkedin(params) {
     
 const iniciarBrowser = await puppeteer.launch({ headless: false}) //incia o browser visivelmente
 const pagina = await iniciarBrowser.newPage();
@@ -17,7 +17,17 @@ await pagina.type('#password', process.env.LINKEDIN_PASSWORD);
 await pagina.click('[type="submit"]')
 await pagina.waitForNavigation()
 
+await pagina.goto(urlEmpresa)
 
+iniciarBrowser.close()
 }
 
-naoSeiAinda()
+const urlEmpresa = process.argv[2] //usa o [2] quando os argumentos fornecidos pelo usuário.
+if (!urlEmpresa) {
+    console.log("insira a url da empresa");
+    process.exit(1); //vai lançar que deu um erro na execução
+}
+
+console.log(`URL da empresa fornecida: ${urlEmpresa}`);
+
+iniciandoLinkedin(urlEmpresa)
