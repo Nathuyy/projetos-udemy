@@ -1,12 +1,19 @@
 {
-    "users": [{
-        "id": 1,
-        "nome": "Nathália Cericatto",
-        "email": "nathalia.cericatto@gmail.com"
-
-        }, {
-            "id": 2,
-            "nome": "Fulano da Ciclano",
-            "email": "fulano.ciclano@gmail.com"
-        }]
+  "users": [
+    {
+      "id": 1,
+      "nome": "Nathália Cericatto",
+      "email": "nathalia.cericatto@gmail.com"
+    },
+    {
+      "id": 2,
+      "nome": "Fulano da Ciclano",
+      "email": "fulano.ciclano@gmail.com"
+    },
+    {
+      "name": "Roberto Carlos",
+      "email": "teste@teste.com",
+      "id": 3
+    }
+  ]
 }
