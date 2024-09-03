@@ -1,0 +1,9 @@
+
+.button-spacing {
+    margin-right: 10px; 
+}
+
+.actions {
+    display: flex;
+    gap: 10px; 
+}
